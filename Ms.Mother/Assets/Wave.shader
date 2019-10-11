@@ -1,4 +1,4 @@
-﻿Shader "Custom/Flag" {
+﻿Shader "Custom/Wave" {
 	Properties{
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
 	}
@@ -19,8 +19,8 @@
 			void vert(inout appdata_full v, out Input o)
 			{
 				UNITY_INITIALIZE_OUTPUT(Input, o);
-				float amp = 0.5*sin(_Time * 10 + v.vertex.x * 100);
-				v.vertex.xyz = float3(v.vertex.x, v.vertex.y + amp, v.vertex.z);
+				float amp = 0.25*sin(_Time*100+ v.vertex.x * 100);
+				v.vertex.xyz = float3(v.vertex.x, v.vertex.y+amp , v.vertex.z);
 				//v.normal = normalize(float3(v.normal.x+offset_, v.normal.y, v.normal.z));
 			}
 
