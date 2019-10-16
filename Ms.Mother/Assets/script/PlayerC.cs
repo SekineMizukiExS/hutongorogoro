@@ -11,13 +11,11 @@ public class PlayerC : MonoBehaviour
     Vector3 HutonRight;
 
     Rigidbody dd;
-    GameManager GM;
 
     // Start is called before the first frame update
     void Start()
     {
         dd = Body.GetComponent<Rigidbody>();
-        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
