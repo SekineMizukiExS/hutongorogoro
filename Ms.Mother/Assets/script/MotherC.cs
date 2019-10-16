@@ -26,7 +26,7 @@ public class MotherC : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if(time>0.5f)
+        if(time>2.5f)
         {
             time = 0;
             ck = !ck;
