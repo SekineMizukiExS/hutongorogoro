@@ -189,7 +189,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363005790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -319,6 +319,7 @@ GameObject:
   - component: {fileID: 751957387}
   - component: {fileID: 751957386}
   - component: {fileID: 751957385}
+  - component: {fileID: 751957390}
   - component: {fileID: 751957389}
   m_Layer: 8
   m_Name: mat
@@ -417,6 +418,20 @@ MonoBehaviour:
   rot: 0
   time: 0
   ck: 0
+--- !u!114 &751957390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751957384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521433e60768f814c80282aec3990661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filter: {fileID: 0}
+  _collider: {fileID: 0}
 --- !u!1 &1015772878
 GameObject:
   m_ObjectHideFlags: 0
