@@ -10,10 +10,13 @@ public class MotherC : MonoBehaviour
     GameObject Huton;
 
     [SerializeField]
-    float rot = 0,time = 0;
+    float rot = 0, time = 0, sw = 0;
 
     [SerializeField]
     bool ck = false;
+
+    [SerializeField]
+    private const bool CPU = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +29,7 @@ public class MotherC : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if(time>2.5f)
+        if(time>2.0f)
         {
             time = 0;
             ck = !ck;

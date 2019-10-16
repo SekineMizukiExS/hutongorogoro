@@ -280,6 +280,8 @@ GameObject:
   - component: {fileID: 932305797}
   - component: {fileID: 932305796}
   - component: {fileID: 932305795}
+  - component: {fileID: 932305800}
+  - component: {fileID: 932305799}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -360,6 +362,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &932305799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932305794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521433e60768f814c80282aec3990661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _filter: {fileID: 932305797}
+  _collider: {fileID: 932305795}
+  sw: 0
+--- !u!114 &932305800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932305794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba733c1175a634940b45d7315deb0274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1402144396}
+  Huton: {fileID: 932305794}
+  rot: 0
+  time: 0
+  sw: 0
+  ck: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +614,7 @@ MonoBehaviour:
   Huton: {fileID: 932305794}
   rot: 0
   time: 0
+  sw: 0
   ck: 0
 --- !u!4 &1915651311 stripped
 Transform:
