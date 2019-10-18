@@ -79,7 +79,7 @@ public class FutonVA : MonoBehaviour
         {
             if (t < 2.0f)
             {
-                transform.localPosition=transform.localPosition+new Vector3(0.05f, 0, 0);
+                transform.localPosition=transform.localPosition+new Vector3(0.025f, 0, 0);
                 t += 0.05f;
             }
         }
@@ -87,7 +87,7 @@ public class FutonVA : MonoBehaviour
         {
             if (t > -2.0f)
             {
-                transform.localPosition = transform.localPosition + new Vector3(-0.05f, 0, 0);
+                transform.localPosition = transform.localPosition + new Vector3(-0.025f, 0, 0);
                 t -= 0.05f;
             }
         }
