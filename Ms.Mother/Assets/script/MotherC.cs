@@ -7,7 +7,7 @@ public class MotherC : MonoBehaviour
     [SerializeField]
     GameObject Player;
     [SerializeField]
-    GameObject Huton;
+    GameObject Huton =null;
 
     [SerializeField]
     float rot = 0, time = 0, sw = 0;
