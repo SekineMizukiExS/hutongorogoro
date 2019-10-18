@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class RotateAroundTest : MonoBehaviour
 {
+    PlayerColiderEvents PlColEve;
+
     Vector3 rotatePoint = Vector3.zero;  //回転の中心
     Vector3 rotateAxis = Vector3.zero;   //回転軸
     float cubeAngle = 0f;                //回転角度
+
 
     float cubeSizeHalf;                  //キューブの大きさの半分
     bool isRotate = false;               //回転中に立つフラグ。回転中は入力を受け付けない
@@ -14,6 +17,7 @@ public class RotateAroundTest : MonoBehaviour
     void Start()
     {
         cubeSizeHalf = transform.localScale.x / 2f;
+        PlColEve = GetComponent<PlayerColiderEvents>();
     }
 
     void Update()
@@ -74,6 +78,7 @@ public class RotateAroundTest : MonoBehaviour
         isRotate = false;
         rotatePoint = Vector3.zero;
         rotateAxis = Vector3.zero;
+        PlColEve.PlaySound(0);
 
         yield break;
     }

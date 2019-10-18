@@ -7,10 +7,15 @@ public class PlayerColiderEvents : MonoBehaviour
     [SerializeField]
     GameManager GM;
 
+    AudioSource m_AS;
+    [SerializeField]
+    AudioClip[] m_AC;
+
     // Start is called before the first frame update
     void Start()
     {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        m_AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,8 +37,14 @@ public class PlayerColiderEvents : MonoBehaviour
         if (collision.gameObject.tag == "Score")
         {
             GM.AddScore(100);
+            PlaySound(1);
             Destroy(collision.gameObject);
         }
+    }
+
+    public void PlaySound(int n)
+    {
+        m_AS.PlayOneShot(m_AC[n]);
     }
     
 }
