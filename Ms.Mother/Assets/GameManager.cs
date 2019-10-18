@@ -13,7 +13,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float limitTime;
 
+
+    public GameObject clearText;
+    public GameObject overText;
     public bool clearFlug;
+    public bool overFlug;
 
     public int score = 0;
     public float time = 0;
@@ -30,6 +34,7 @@ public class GameManager : MonoBehaviour
         if(limitTime < time)
         {
             clearFlug = true;
+            clearText.SetActive(true);
         }
         else
         {
@@ -42,5 +47,11 @@ public class GameManager : MonoBehaviour
     {
         score += addscore;
         scoreText.text = "Score:" + score.ToString("D5");
+    }
+
+    public void GameOverOn()
+    {
+        overFlug = true;
+        overText.SetActive(true);
     }
 }

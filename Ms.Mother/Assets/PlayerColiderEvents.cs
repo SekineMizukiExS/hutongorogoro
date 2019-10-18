@@ -16,7 +16,10 @@ public class PlayerColiderEvents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.y <= -20)
+        {
+            GM.GameOverOn();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,4 +35,5 @@ public class PlayerColiderEvents : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    
 }
