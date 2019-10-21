@@ -29,6 +29,9 @@ public class MotherC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GM.clearFlug)
+            return;
+
         time += Time.deltaTime;
 
         if(time>interTime)

@@ -11,13 +11,17 @@ public class MeshEdit : MonoBehaviour
     private float amplitude = 0.0f;// 波の振幅（A）
     [SerializeField, Range(0.1f, 5.0f)]
     private float period = 0.0f;// 波の波長（λ）
-    [SerializeField, Range(0.1f, 30.0f)]
+    [SerializeField, Range(0.1f, 60.0f)]
     private float wavelength = 0.0f;// 波の周期（T）
 
     Ray test1;
 
+    private Vector3 editPoint;
+
     MeshFilter meshFilter;
     MeshCollider meshCollider;
+
+    bool sw = false;
 
     //マウス位置、どこまでの距離が変形するか
     float editDistance = 1f;
@@ -33,19 +37,36 @@ public class MeshEdit : MonoBehaviour
     {
         //カメラからレイを飛ばす
         //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        //RaycastHit hit;
 
-        test1 = new Ray(Player.transform.position, new Vector3(0, -1.0f, 0));
+        //test1 = new Ray(Player.transform.position, new Vector3(0, -1.0f, 0));
 
-        if (Physics.Raycast(test1, out hit))
+        //if (Physics.Raycast(test1, out hit))
+        //{
+        //    edit(hit.point);
+        //}
+
+        edit();
+        if(sw)
         {
-            edit(hit.point);
+            amplitude += 1.5f*Time.deltaTime;
+        }
+        else
+        {
+            amplitude -= Time.deltaTime;
+        }
+        if (amplitude < 0.0f)
+            amplitude = 0.0f;
+        else if (amplitude > 3.0f)
+        {
+            amplitude = 3.0f;
+            sw = !sw;
         }
     }
 
     private int cnt = 0;
     private float time = 0;
-    void edit(Vector3 editPoint)
+    void edit()
     {
         Vector3[] vertices = meshFilter.mesh.vertices;
         for (int i = 0; i < vertices.Length; i++)
@@ -67,5 +88,15 @@ public class MeshEdit : MonoBehaviour
 
         //MeshColliderにメッシュ情報を入れる
         meshCollider.sharedMesh = meshFilter.mesh;        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.tag =="InpactSphere")
+        {
+            editPoint = other.transform.position;
+            sw = true;
+            time = 0;
+        }
     }
 }
