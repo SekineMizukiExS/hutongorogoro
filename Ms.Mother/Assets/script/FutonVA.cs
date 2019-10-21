@@ -10,7 +10,8 @@ public class FutonVA : MonoBehaviour
     private MeshCollider _collider;
     [SerializeField]
     private bool sw = false;
-
+    [SerializeField]
+    private float limet = 0;
     private const float Max = 0.1f, Min = -0.1f;
 
     // Start is called before the first frame update
@@ -26,19 +27,31 @@ public class FutonVA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        WaveF(sw);
+        //生存時間で発生させる
+        if (limet < 30)
+        {
+            Move();
+        }
+        if(limet<20)
+        {
+            WaveF(sw);
+        }
+    }
+
+    public void SendLimetTime(float lime)
+    {
+        limet = lime;
     }
 
     void WaveF(bool ss)
     {
         if (ss)
         {
-            palse += Time.deltaTime * 2;
+            palse += Time.deltaTime*0.5f;
         }
         else
         {
-            palse -= Time.deltaTime * 2;
+            palse -= Time.deltaTime * 0.5f;
         }
 
         if (palse > 1.0f)

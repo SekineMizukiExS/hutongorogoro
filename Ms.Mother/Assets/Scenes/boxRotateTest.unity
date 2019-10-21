@@ -914,8 +914,8 @@ GameObject:
   - component: {fileID: 751957387}
   - component: {fileID: 751957386}
   - component: {fileID: 751957385}
-  - component: {fileID: 751957392}
   - component: {fileID: 751957391}
+  - component: {fileID: 751957392}
   - component: {fileID: 751957390}
   - component: {fileID: 751957389}
   m_Layer: 8
@@ -1014,7 +1014,6 @@ MonoBehaviour:
   Huton: {fileID: 751957384}
   rot: 0
   time: 0
-  sw: 0
   ck: 0
 --- !u!114 &751957390
 MonoBehaviour:
@@ -1043,6 +1042,7 @@ MonoBehaviour:
   _filter: {fileID: 0}
   _collider: {fileID: 0}
   sw: 0
+  limet: 0
 --- !u!114 &751957392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,6 +1678,7 @@ MonoBehaviour:
   limitTime: 50
   clearText: {fileID: 498014078}
   overText: {fileID: 1154944951}
+  Futon: {fileID: 751957384}
   clearFlug: 0
   overFlug: 0
   score: 0
