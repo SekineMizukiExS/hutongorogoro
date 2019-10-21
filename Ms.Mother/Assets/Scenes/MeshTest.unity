@@ -462,9 +462,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1433389941}
-  amplitude: 1
-  period: 1
-  wavelength: 1
+  amplitude: 5
+  period: 5
+  wavelength: 29.8
 --- !u!23 &2134626534
 MeshRenderer:
   m_ObjectHideFlags: 0

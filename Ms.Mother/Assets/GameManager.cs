@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject clearText;
     public GameObject overText;
+    public GameObject Futon;
     public bool clearFlug;
     public bool overFlug;
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
             time += 1 * Time.deltaTime;
             timeText.text = "Time:" + ((int)(limitTime - time)).ToString("D3");
         }
+        Futon.GetComponent<FutonVA>().SendLimetTime(limitTime - time);
     }
 
     public void AddScore(int addscore)

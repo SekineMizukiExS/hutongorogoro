@@ -10,7 +10,7 @@ public class MotherC : MonoBehaviour
     GameObject Huton =null;
 
     [SerializeField]
-    float rot = 0, time = 0, sw = 0;
+    float rot = 0, time = 0;
 
     [SerializeField]
     bool ck = false;
