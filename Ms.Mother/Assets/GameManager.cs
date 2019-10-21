@@ -23,10 +23,21 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public float time = 0;
 
+    public MotherC motherC;
+    public PlayerC playerC;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!motherC)
+        {
+            motherC = GameObject.Find("mat").GetComponent<MotherC>();
+        }
+        if (!playerC)
+        {
+            playerC = GameObject.Find("Player").GetComponent<PlayerC>();
+        }
+
     }
 
     // Update is called once per frame
@@ -34,8 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if(limitTime < time)
         {
-            clearFlug = true;
-            clearText.SetActive(true);
+            GameClearOn();
         }
         else
         {
@@ -51,9 +61,28 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score:" + score.ToString("D5");
     }
 
+    //くりあ後の処理
+    public void GameClearEvent()
+    {
+        motherC.MatRotateChange(0);
+    }
+
+    public void GameClearOn()
+    {
+        if (!clearFlug && !overFlug)
+        {
+            clearFlug = true;
+            clearText.SetActive(true);
+            GameClearEvent();
+        }
+    }
+    //ゲームオーバー受け取り
     public void GameOverOn()
     {
-        overFlug = true;
-        overText.SetActive(true);
+        if (!clearFlug && !overFlug)
+        {
+            overFlug = true;
+            overText.SetActive(true);
+        }
     }
 }

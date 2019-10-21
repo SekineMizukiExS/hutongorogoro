@@ -10,7 +10,7 @@ public class MotherC : MonoBehaviour
     GameObject Huton =null;
 
     [SerializeField]
-    float rot = 0, time = 0;
+    float rot = 0, time = 0, interTime = 0,leftmaxRot,rightmaxRot;
 
     [SerializeField]
     bool ck = false;
@@ -18,10 +18,12 @@ public class MotherC : MonoBehaviour
     [SerializeField]
     private const bool CPU = false;
 
+    GameManager GM;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class MotherC : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if(time>2.0f)
+        if(time>interTime)
         {
             time = 0;
             ck = !ck;
@@ -38,7 +40,7 @@ public class MotherC : MonoBehaviour
         if(ck)
         {
             //Huton.transform.rotation = Quaternion.Euler(0, 0, 5);
-            if (rot <= 45)
+            if (rot <= rightmaxRot)
             {
                 Huton.transform.Rotate(0, 0, 2.5f);
                 rot += 2.5f;
@@ -48,12 +50,23 @@ public class MotherC : MonoBehaviour
         else
         {
             //Huton.transform.rotation = Quaternion.Euler(0, 0, -5);
-            if (rot >= -45)
+            if (rot >= leftmaxRot)
             {
                 Huton.transform.Rotate(0, 0, -2.5f);
                 rot += -2.5f;
             }
             //Player.transform.Translate(-0.05f, 0, 0);
         }
+    }
+
+    public void MatRotateChange(float rot)
+    {
+        rightmaxRot = rot;
+        leftmaxRot = -rot;
+    }
+    public void MatRotateChange(float Lrot,float Rrot)
+    {
+        rightmaxRot = Rrot;
+        leftmaxRot = Lrot;
     }
 }
