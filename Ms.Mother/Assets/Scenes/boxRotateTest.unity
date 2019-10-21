@@ -331,6 +331,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189316258}
   m_CullTransparentMesh: 0
+--- !u!1 &207108768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 207108770}
+  - component: {fileID: 207108769}
+  m_Layer: 0
+  m_Name: InpactGenerate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &207108769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207108768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c2445b5952d294f8fc92bbcd1c4179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 751957384}
+  InpactSphere: {fileID: 4138607898813067142, guid: 04a7f38e333c2564aa837b22fe226173,
+    type: 3}
+--- !u!4 &207108770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207108768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.7347898, y: 2.4451752, z: -0.4935043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &363005790
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,14 +995,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751957384}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 521433e60768f814c80282aec3990661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _filter: {fileID: 0}
   _collider: {fileID: 0}
-  sw: 0
+  move_sw: 0
+  wave_sw: 0
   limet: 0
 --- !u!114 &751957392
 MonoBehaviour:
@@ -965,13 +1012,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751957384}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5af12cbc35bdf6d4fbe9392e3c9cc356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 363005790}
-  amplitude: 0.74
+  amplitude: 0
   period: 4.35
   wavelength: 30
 --- !u!1001 &900446849
