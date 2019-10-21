@@ -9,7 +9,7 @@ public class FutonVA : MonoBehaviour
     [SerializeField]
     private MeshCollider _collider;
     [SerializeField]
-    private bool sw = false;
+    private bool move_sw = false,wave_sw = false;
     [SerializeField]
     private float limet = 0;
     private const float Max = 0.1f, Min = -0.1f;
@@ -34,7 +34,7 @@ public class FutonVA : MonoBehaviour
         }
         if(limet<20)
         {
-            WaveF(sw);
+            WaveF(wave_sw);
         }
     }
 
@@ -47,20 +47,22 @@ public class FutonVA : MonoBehaviour
     {
         if (ss)
         {
-            palse += Time.deltaTime*0.5f;
+            palse += Time.deltaTime*0.05f;
         }
         else
         {
-            palse -= Time.deltaTime * 0.5f;
+            palse -= Time.deltaTime * 0.05f;
         }
 
         if (palse > 1.0f)
         {
             palse = 1.0f;
+            wave_sw = !wave_sw;
         }
         else if (palse < -1.0f)
         {
             palse = -1.0f;
+            wave_sw = !wave_sw;
         }
         Vector3[] vertices = _filter.mesh.vertices;
         for (int i = 0; i < vertices.Length; i++)
@@ -85,10 +87,10 @@ public class FutonVA : MonoBehaviour
         if (time > 3.0f)
         {
             time = 0;
-            sw = !sw;
+            move_sw = !move_sw;
         }
 
-        if (sw)
+        if (move_sw)
         {
             if (t < 2.0f)
             {
