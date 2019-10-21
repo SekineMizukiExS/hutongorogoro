@@ -22,26 +22,27 @@ public class RotateAroundTest : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log("hol:" + Input.GetAxis("Horizontal"));
         //回転中は入力を受け付けない
         if (isRotate)
             return;
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetAxis("Horizontal") >= 0.1f)
         {
             rotatePoint = transform.position + new Vector3(cubeSizeHalf, -cubeSizeHalf, 0f);
             rotateAxis = new Vector3(0, 0, -1);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetAxis("Horizontal") <= -0.1f)
         {
             rotatePoint = transform.position + new Vector3(-cubeSizeHalf, -cubeSizeHalf, 0f);
             rotateAxis = new Vector3(0, 0, 1);
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetAxis("Vertical") >= 0.1f)
         {
             rotatePoint = transform.position + new Vector3(0f, -cubeSizeHalf, cubeSizeHalf);
             rotateAxis = new Vector3(1, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxis("Vertical") <= -0.1f)
         {
             rotatePoint = transform.position + new Vector3(0f, -cubeSizeHalf, -cubeSizeHalf);
             rotateAxis = new Vector3(-1, 0, 0);

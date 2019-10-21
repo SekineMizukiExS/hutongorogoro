@@ -24,6 +24,7 @@ public class PlayerC : MonoBehaviour
         Vector3 velo;
         velo = dd.velocity;
 
+
         if (Input.GetKeyDown(KeyCode.D))
         {
             HutonRight = HutonObj.transform.right;
