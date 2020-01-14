@@ -10,7 +10,7 @@ public class DataC : ScriptableObject
     private string _FileName="TEST";
 
     [SerializeField]
-    private string _tags = "NULL";
+    private string _tags = "Stage";
 
     [SerializeField]
     private string _Enemytags = "NULL";
@@ -89,29 +89,36 @@ public class DataC : ScriptableObject
             stage.StageObjects.Add(Obj);
         }
         //エネミー配置
-        Enemyresult = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
-        foreach (var x in Enemyresult)
+        try
         {
-            var EObj = x.GetComponent<EnemyParam>();
-            var transCp = x.transform;
-            var EData = new EnemyData();
-
-            EData.Type = EObj.Type;
-            EData.MeshKey = EObj.MeshKey;
-            EData.TexKey = EObj.TexKey;
-            EData.Pos = vectorToStr(transCp.position);
-            EData.Scale = vectorToStr(transCp.localScale);
-            EData.Rot = vectorToStr(new Vector3(0, 0, 0));
-
-            foreach (var MPD in EObj.Points)
+            Enemyresult = new List<GameObject>(GameObject.FindGameObjectsWithTag("Enemy"));
+            foreach (var x in Enemyresult)
             {
-                var PosData = new POINTDATA();
-                PosData.TravelingA = MPD.AfterP;
-                PosData.TravelingB = MPD.BeforeP;
-                PosData.Pos = vectorToStr(MPD.transform.position);
-                EData.MovePoint.Point.Add(PosData);
+                var EObj = x.GetComponent<EnemyParam>();
+                var transCp = x.transform;
+                var EData = new EnemyData();
+
+                EData.Type = EObj.Type;
+                EData.MeshKey = EObj.MeshKey;
+                EData.TexKey = EObj.TexKey;
+                EData.Pos = vectorToStr(transCp.position);
+                EData.Scale = vectorToStr(transCp.localScale);
+                EData.Rot = vectorToStr(new Vector3(0, 0, 0));
+
+                foreach (var MPD in EObj.Points)
+                {
+                    var PosData = new POINTDATA();
+                    PosData.TravelingA = MPD.AfterP;
+                    PosData.TravelingB = MPD.BeforeP;
+                    PosData.Pos = vectorToStr(MPD.transform.position);
+                    EData.MovePoint.Point.Add(PosData);
+                }
+                stage.EnemyDatas.Add(EData);
             }
-            stage.EnemyDatas.Add(EData);
+        }
+        catch
+        {
+
         }
 
         temp.Stage = stage;
