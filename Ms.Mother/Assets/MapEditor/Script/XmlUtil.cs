@@ -25,17 +25,6 @@ public class Object
 {
     [System.Xml.Serialization.XmlAttribute("Type")]
     public string Type;
-    public string Pos;
-    public string Scale;
-    public string Rot;
-}
-
-//EnemyXML
-[Serializable]
-public class EnemyData
-{
-    [System.Xml.Serialization.XmlAttribute("Type")]
-    public string Type;
     [System.Xml.Serialization.XmlAttribute("Pos")]
     public string Pos;
     [System.Xml.Serialization.XmlAttribute("Scale")]
@@ -46,7 +35,12 @@ public class EnemyData
     public string MeshKey;
     [System.Xml.Serialization.XmlAttribute("TexKey")]
     public string TexKey;
+}
 
+//EnemyXML
+[Serializable]
+public class EnemyData :Object
+{
     public OParam ObjParam = new OParam();
     public MPoint MovePoint = new MPoint();
 }
