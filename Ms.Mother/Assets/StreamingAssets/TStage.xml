@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Stage>
+    <StageObjects>
+      <Object Type="Flower" Pos="3.072781,7.893782,-4.294679" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="3.190696,7.934875,-5.037264" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="3.651818,8.07097,-5.645089" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="5.358006,8.021791,-3.379432" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="5.896289,8.021791,-3.769215" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="6.218927,7.829871,-4.402319" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="5.959597,7.974389,-4.887168" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="4.675151,8.070531,-5.68443" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="5.459981,8.075665,-4.291162" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="5.566926,8.075209,-5.68443" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="3.730987,7.877018,-3.041364" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Flower" Pos="0.007204451,0.3218637,-0.004685095" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="DangenGate" Pos="-6.967206,6.329356,-7.002793" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Bridge" Pos="2.39,6.831758,3.57355" Scale="85.23703,64.32346,64.32346" Rot="0,0,0" />
+      <Object Type="StageBlock" Pos="0,0.3089094,0" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="-7.869513,7.493287,0.08861761" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="-7.869513,7.493287,3.356008" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="-7.869513,7.493287,6.487145" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="-6.017752,7.493287,8.010872" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="-2.920345,7.493287,8.010872" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="3.138408,7.493287,8.010872" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="6.350448,7.493287,8.010872" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="7.944073,7.493287,5.984295" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="7.944073,7.493287,2.879" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Fence" Pos="7.944073,7.493287,-0.009368726" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="3.56129,8.094186,-7.334187" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="1.819153,8.153618,-5.773447" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-5.319491,7.509491,-0.3843856" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-7.425476" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="2.813881,7.921429,-1.826148" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-4.975548" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="2.491183,7.921429,-7.334187" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-7.437306,7.509491,-3.588137" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-5.319491,7.55898,2.704499" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-1.68211" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-0.3843856" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="6.384202,8.080641,-1.936112" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="3.170508,7.493918,1.842146" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-3.80014,7.509491,-0.3843856" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-6.168442" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="1.805023,7.613599,1.842146" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="5.336551,8.139408,-7.334187" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-6.184184,7.509491,-3.588137" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="7.312584,8.200129,-5.810025" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="7.312584,8.132196,-3.833374" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="1.819153,8.153618,-3.433127" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="-2.136518,7.509491,-3.238934" Scale="10,10,10" Rot="0,0,0" />
+      <Object Type="Tree" Pos="6.830813,7.921429,-7.334187" Scale="10,10,10" Rot="0,0,0" />
+    </StageObjects>
+    <EnemyDatas />
+  </Stage>
+</root>
