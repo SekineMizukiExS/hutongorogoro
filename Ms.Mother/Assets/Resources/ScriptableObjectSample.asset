@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ScriptableObjectSample
   m_EditorClassIdentifier: 
   _FileName: TEST
-  _tags: Stage
-  _Enemytags: NULL
+  _tags: StageBlock
+  _Enemytags: Enemy

@@ -6,7 +6,6 @@ using System.Reflection;
 using UnityEngine;
 using UnityEditor;
 
-#if UNITY_EDITOR
 public class EditorWindowSample : EditorWindow
 {
     [MenuItem("Editor/MapExportToXML")]
@@ -146,7 +145,17 @@ public class EditorWindowSample : EditorWindow
 
     private void Import()
     {
+        //if (_sample == null)
+        //{
+        //    _sample = ScriptableObject.CreateInstance<DataC>();
+        //}
 
+        //DataC sample = AssetDatabase.LoadAssetAtPath<DataC>(ASSET_PATH);
+        //if (sample == null)
+        //    return;
+
+        //// コピーする
+        //_sample.Copy(sample);
     }
 
     ///<summary>
@@ -157,4 +166,3 @@ public class EditorWindowSample : EditorWindow
 
     //}
 }
-#endif
