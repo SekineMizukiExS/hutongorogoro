@@ -6,6 +6,10 @@ public class ObjectElem : MonoBehaviour
 {
     [SerializeField]
     public string Type;
+    [SerializeField]
+    public string MeshKey;
+    [SerializeField]
+    public string TexKey;
 
     // Start is called before the first frame update
     void Start()

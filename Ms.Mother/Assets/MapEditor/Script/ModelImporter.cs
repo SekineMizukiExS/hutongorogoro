@@ -23,6 +23,8 @@ public sealed class ModelPostprocessor : AssetPostprocessor
     {
         game.transform.gameObject.tag = "Stage".ToString();
         game.gameObject.AddComponent<ObjectElem>().Type = "FixedObject";
+        game.gameObject.GetComponent<ObjectElem>().MeshKey = "NULL";
+        game.gameObject.GetComponent<ObjectElem>().TexKey = "NULL";
     }
 }
 #endif
