@@ -86,6 +86,8 @@ public class DataC : ScriptableObject
             Obj.Pos = vectorToStr(trans.position);
             Obj.Rot = vectorToStr(new Vector3(0, 0, 0));
             Obj.Scale = vectorToStr(trans.localScale);
+            Obj.MeshKey = tes.MeshKey;
+            Obj.TexKey = tes.TexKey;
             stage.StageObjects.Add(Obj);
         }
         //エネミー配置
