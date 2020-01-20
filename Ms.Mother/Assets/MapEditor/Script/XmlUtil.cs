@@ -11,6 +11,27 @@ using System.Xml.Serialization;
 public class root
 {
     public Stage Stage = new Stage();
+    public SettingData settingData = new SettingData();
+}
+
+[Serializable]
+public class SettingData
+{
+    public List<SetPosData> posDatas = new List<SetPosData>();
+}
+
+//開始位置などのポジションデータ群
+[Serializable]
+public class SetPosData
+{
+    [System.Xml.Serialization.XmlAttribute("Type")]
+    public string DataType;
+
+    [System.Xml.Serialization.XmlAttribute("PosKey")]
+    public string PosKey;
+
+    [System.Xml.Serialization.XmlAttribute("Position")]
+    public string PosStr;
 }
 
 [Serializable]

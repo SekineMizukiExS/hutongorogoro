@@ -21,6 +21,9 @@ public class DataC : ScriptableObject
     [NonSerialized]
     private List<GameObject> Enemyresult;
 
+    [NonSerialized]
+    private List<GameObject> SettingObj;
+
     public string SetFileName
     {
         get { return _FileName; }
@@ -76,6 +79,7 @@ public class DataC : ScriptableObject
         result = new List<GameObject>(GameObject.FindGameObjectsWithTag(TagSet));
         var temp = new root();
         var stage = new Stage();
+        var Setting = new SettingData();
         //ステージ配置
         foreach(var ob in result)
         {
@@ -123,7 +127,28 @@ public class DataC : ScriptableObject
 
         }
 
+        try
+        {
+            SettingObj = new List<GameObject>(GameObject.FindGameObjectsWithTag("SettingObject"));
+
+            foreach(var Obj in SettingObj)
+            {
+                var SetParam = Obj.GetComponent<SettingParam>();
+                var transCp = Obj.transform;
+                var SData = new SetPosData();
+
+                SData.DataType = SetParam.Type;
+                SData.PosKey = SetParam.PosKey;
+                SData.PosStr = vectorToStr(transCp.position);
+                Setting.posDatas.Add(SData);
+            }
+        }
+        catch
+        {
+
+        }
         temp.Stage = stage;
+        temp.settingData = Setting;
         return temp;
     }
 

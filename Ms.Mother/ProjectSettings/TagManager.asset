@@ -9,6 +9,10 @@ TagManager:
   - InpactSphere
   - enemy
   - Stage
+  - Enemy
+  - StageBlock
+  - PlayerStart
+  - SettingObject
   layers:
   - Default
   - TransparentFX
