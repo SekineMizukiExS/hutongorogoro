@@ -92,6 +92,28 @@ public class DataC : ScriptableObject
             Obj.Scale = vectorToStr(trans.localScale);
             Obj.MeshKey = tes.MeshKey;
             Obj.TexKey = tes.TexKey;
+            try
+            {
+                var obj = ob.GetComponent<PairParam>();
+                Obj.PairKey = obj.PairKey;
+                Obj.MovingType = obj.MovingType;
+            }
+            catch
+            {
+                Obj.PairKey = "NULL";
+                Obj.MovingType = "NULL";
+            }
+            try
+            {
+                var Load = ob.GetComponent<LoadParam>();
+                Obj.FileName = Load.LoadFileName;
+                Obj.TargetPosKey = Load.TargetPosKey;
+            }
+            catch
+            {
+                Obj.FileName = "NULL";
+                Obj.TargetPosKey = "NULL";
+            }
             stage.StageObjects.Add(Obj);
         }
         //エネミー配置

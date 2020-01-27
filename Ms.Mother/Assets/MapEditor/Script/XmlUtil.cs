@@ -56,6 +56,14 @@ public class Object
     public string MeshKey;
     [System.Xml.Serialization.XmlAttribute("TexKey")]
     public string TexKey;
+    [System.Xml.Serialization.XmlAttribute("LoadMapFile")]
+    public string FileName;
+    [System.Xml.Serialization.XmlAttribute("TargetPosKey")]
+    public string TargetPosKey;
+    [System.Xml.Serialization.XmlAttribute("LINKCODE")]
+    public string PairKey;
+    [System.Xml.Serialization.XmlAttribute("MovingType")]
+    public string MovingType;
 }
 
 //EnemyXML

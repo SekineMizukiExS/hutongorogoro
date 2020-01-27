@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadParam : MonoBehaviour
+public class PairParam : MonoBehaviour
 {
     [SerializeField]
-    public string LoadFileName = "NULL";
+    public string PairKey;
     [SerializeField]
-    public string TargetPosKey = "NULL";
+    public string MovingType;
 
     // Start is called before the first frame update
     void Start()
