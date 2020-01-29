@@ -46,6 +46,8 @@ public class Object
 {
     [System.Xml.Serialization.XmlAttribute("Type")]
     public string Type;
+    [System.Xml.Serialization.XmlAttribute("Tag")]
+    public string GameTag;
     [System.Xml.Serialization.XmlAttribute("Pos")]
     public string Pos;
     [System.Xml.Serialization.XmlAttribute("Scale")]

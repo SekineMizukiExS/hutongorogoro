@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectElem : MonoBehaviour
+public class ItemParam : MonoBehaviour
 {
     [SerializeField]
-    public string Type;
-    [SerializeField]
-    public string GameTag = "NULL";
-    [SerializeField]
-    public string MeshKey;
-    [SerializeField]
-    public string TexKey;
+    public string GameTag;
 
     // Start is called before the first frame update
     void Start()

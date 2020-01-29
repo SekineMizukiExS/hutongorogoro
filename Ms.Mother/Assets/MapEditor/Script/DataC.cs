@@ -92,6 +92,7 @@ public class DataC : ScriptableObject
             Obj.Scale = vectorToStr(trans.localScale);
             Obj.MeshKey = tes.MeshKey;
             Obj.TexKey = tes.TexKey;
+            Obj.GameTag = tes.GameTag;
             try
             {
                 var obj = ob.GetComponent<PairParam>();
@@ -116,6 +117,8 @@ public class DataC : ScriptableObject
             }
             stage.StageObjects.Add(Obj);
         }
+        //アイテム配置
+
         //エネミー配置
         try
         {
