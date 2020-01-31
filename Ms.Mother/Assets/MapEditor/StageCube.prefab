@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1599587276143118592}
   - component: {fileID: 1892466765913585909}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: StageBlock
+  m_Name: StageCube
+  m_TagString: Stage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,3 +91,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: FixedObject
+  GameTag: NULL
+  MeshKey: 
+  TexKey: 

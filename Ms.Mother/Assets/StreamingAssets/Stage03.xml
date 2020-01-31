@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Stage KeyNum = "1" MoveLimit = "30">
+    <StageObjects>
+      <Object Type="FixedGround" Tag="StageBlocks" Pos="-9,0,29.7" Scale="48,3,12" Rot="0,0,0" MeshKey="testcube" TexKey="LeafMat_TX" />
+      <Object Type="FixedGround" Tag="StageBlocks" Pos="0,0,0" Scale="12,3,9" Rot="0,0,0" MeshKey="testcube" TexKey="LeafMat_TX" />
+      <Object Type="MoveObject" Tag="MoveFloor" Pos="10.2,0,19.1" Scale="9,3,9" Rot="0,0,0" MeshKey="DEFAULT_CUBE" TexKey="clearmat_TX" LINKCODE="DEFAULT" MovingType="0" MoveStartVec="10,0,19" MoveEndVec="10,0,-17" />
+      <Object Type="FixedGround" Tag="StageBlocks" Pos="-9,0,-27.45" Scale="48,3,12" Rot="0,0,0" MeshKey="testcube" TexKey="LeafMat_TX" />
+      <Object Type="CommonObject" Tag="Key" Pos="0,1.61,0" Scale="1,1,1" Rot="0,0,0" MeshKey="Key_MD" TexKey="Key_TX" />
+      <Object Type="LoadObject" Tag="Goal" Pos="-27.49,1.61,-28.7" Scale="1,1,1" Rot="0,0,0" MeshKey="WarpPad_MD_" TexKey="WarpPad_TX" LoadMapFile="Stage03" TargetPosKey="PlayerStart" />
+    </StageObjects>
+    <EnemyDatas />
+  </Stage>
+  <settingData>
+    <posDatas>
+      <SetPosData Type="PlayerStart" PosKey="PlayerStart" Position="-27,3,30" />
+    </posDatas>
+  </settingData>
+</root>

@@ -66,6 +66,10 @@ public class Object
     public string PairKey;
     [System.Xml.Serialization.XmlAttribute("MovingType")]
     public string MovingType;
+    [System.Xml.Serialization.XmlAttribute("MoveStartVec")]
+    public string MoveStartVec;
+    [System.Xml.Serialization.XmlAttribute("MoveEndVec")]
+    public string MoveEndVec;
 }
 
 //EnemyXML

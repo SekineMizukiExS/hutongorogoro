@@ -101,8 +101,8 @@ public class DataC : ScriptableObject
             }
             catch
             {
-                Obj.PairKey = "NULL";
-                Obj.MovingType = "NULL";
+                //Obj.PairKey = "NULL";
+                //Obj.MovingType = "NULL";
             }
             try
             {
@@ -112,9 +112,19 @@ public class DataC : ScriptableObject
             }
             catch
             {
-                Obj.FileName = "NULL";
-                Obj.TargetPosKey = "NULL";
+                //Obj.FileName = "NULL";
+                //Obj.TargetPosKey = "NULL";
             }
+            try
+            {
+                var Move = ob.GetComponent<MoveParam>();
+                Obj.MoveStartVec = vectorToStr(Move.StartPoint);
+                Obj.MoveEndVec = vectorToStr(Move.EndPoint);
+                Obj.MovingType = Move.MovingType.ToString();
+                Obj.PairKey = Move.LinkCode;
+            }
+            catch { }
+
             stage.StageObjects.Add(Obj);
         }
         //アイテム配置
